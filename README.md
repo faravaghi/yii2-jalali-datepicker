@@ -2,6 +2,8 @@ Bootstrap Jalali Date Picker
 ========================
 Jalali Date Picker for Bootstrap Yii2 Extension
 
+[![Latest Stable Version](https://poser.pugx.org/faravaghi/yii2-jalali-datepicker/v/stable)](https://packagist.org/packages/faravaghi/yii2-jalali-datepicker) [![Total Downloads](https://poser.pugx.org/faravaghi/yii2-jalali-datepicker/downloads)](https://packagist.org/packages/faravaghi/yii2-jalali-datepicker) [![Latest Unstable Version](https://poser.pugx.org/faravaghi/yii2-jalali-datepicker/v/unstable)](https://packagist.org/packages/faravaghi/yii2-jalali-datepicker) [![License](https://poser.pugx.org/faravaghi/yii2-jalali-datepicker/license)](https://packagist.org/packages/faravaghi/yii2-jalali-datepicker)
+
 Installation
 ------------
 
