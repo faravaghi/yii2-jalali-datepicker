@@ -1,4 +1,4 @@
-Jalali Date Range Picker
+Bootstrap Jalali Date Picker
 ========================
 Jalali Date Picker for Bootstrap Yii2 Extension
 
