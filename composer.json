@@ -1,0 +1,21 @@
+{
+    "name": "faravaghi/yii2-jalali-datepicker",
+    "description": "Bootstrap Date Picker for Yii2 Extension",
+    "type": "yii2-extension",
+    "keywords": ["yii2","extension","jalali","date picker","persian calendar"],
+    "license": "GPL-2.0",
+    "authors": [
+        {
+            "name": "Mohammd Ebrahim Amini",
+            "email": "faravaghi@gmail.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "faravaghi\\jalaliDatePicker\\": ""
+        }
+    }
+}
