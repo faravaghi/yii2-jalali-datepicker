@@ -28,7 +28,7 @@ Usage
 Once the extension is installed, simply use it in your code by  :
 
 ```php
-<?= 
+<?php 
 use faravaghi\jalaliDatePicker\jalaliDatePicker;
 
 echo $form->field(
@@ -42,12 +42,30 @@ echo $form->field(
 			'viewformat' => 'yyyy/mm/dd',
 			'placement' => 'left',
 			'todayBtn'=> 'linked',
-		),
-		'htmlOptions' => [
 			'id' => 'date',
 			'class'	=> 'form-control'
-		]
+		),
 	]);
 
+?>
+```
+or used this without model
+
+```php
+<?php
+use faravaghi\jalaliDatePicker\jalaliDatePicker;
+
+echo jalaliDatePicker::widget([
+    'name'  => 'date',
+    'value'  => '1395/01/31',
+	'options' => [
+			'format' => 'yyyy/mm/dd',
+			'viewformat' => 'yyyy/mm/dd',
+			'placement' => 'right',
+			'todayBtn' => 'linked' 
+			'id' => 'date',
+			'class' => 'form-control' 
+	],
+]);
 ?>
 ```

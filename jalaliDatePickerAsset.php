@@ -10,6 +10,7 @@
 namespace faravaghi\jalaliDatePicker;
 
 use Yii;
+use yii\web\AssetBundle;
 
 /**
  * Asset bundle for Jalali DateRangePicker Widget
@@ -17,7 +18,7 @@ use Yii;
  * @author Mohammad Ebrahim Amini <faravaghi@gmail.com>
  * @since 1.0
  */
-class jalaliDatePickerAsset extends yii\web\AssetBundle
+class jalaliDatePickerAsset extends AssetBundle
 {
 	public static $extra_js = [];
 

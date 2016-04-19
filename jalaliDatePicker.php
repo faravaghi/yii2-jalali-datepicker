@@ -9,9 +9,9 @@ use yii\base\Model;
 use yii\web\View;
 use yii\helpers\Html;
 use yii\helpers\Json;
-use yii\base\Widget as Widget;
+use yii\widgets\InputWidget;
 
-class jalaliDatePicker extends Widget
+class jalaliDatePicker extends InputWidget
 {
 
 	/**
@@ -19,32 +19,20 @@ class jalaliDatePicker extends Widget
 	 */
 	public $selector;
 
-    /**
-     * @var string attribute associated with this widget.
-     */
-    public $attribute;
-
-    /**
-     * @var \yii\db\ActiveRecord model associated with this widget.
-     */
-    public $model;
+	/**
+	 * @var string attribute associated with this widget.
+	 */
+	public $attribute;
 
 	/**
 	 * @var string JS Callback for Daterange picker
 	 */
 	public $callback;
-	/**
-	 * @var array Options to be passed to daterange picker
-	 */
-	public $options = [];
+
 	/**
 	 * @var string[] the JavaScript event handlers.
 	 */
 	public $events = array();
-	/**
-	 * @var array the HTML attributes for the widget container.
-	 */
-	public $htmlOptions = [];
 
 	/**
 	 * Initializes the widget.
@@ -52,10 +40,6 @@ class jalaliDatePicker extends Widget
 	 */
 	public function init()
 	{
-		//checks for the element id
-		if (!isset($this->htmlOptions['id'])) {
-			$this->htmlOptions['id'] = $this->getId();
-		}
 		parent::init();
 	}
 
@@ -69,20 +53,26 @@ class jalaliDatePicker extends Widget
 
 	protected function registerPlugin()
 	{
-		if ($this->selector)
-		{
+		if($this->selector){
 			$this->registerJs($this->selector, $this->options, $this->callback);
-		} else {
-			$id = $this->htmlOptions['id'];
-			echo Html::activeInput('text', $this->model, $this->attribute, $this->htmlOptions);
-			// echo Html::tag('input', '', $this->htmlOptions);
+		}
+		else{
+			$id = $this->options['id'];
+
+			$input = $this->hasModel()
+					? Html::activeInput('text', $this->model, $this->attribute, $this->options)
+					: Html::textInput($this->name, $this->value, $this->options);
+
+			echo $input;
+
 			$this->registerJs("#{$id}", $this->options, $this->callback);
 		}
 
 
 	}
 
-	protected function registerJs($selector, $options, $callback) {
+	protected function registerJs($selector, $options, $callback)
+	{
 		$view = $this->getView();
 
 		jalaliDatePickerAsset::register($view);
@@ -93,7 +83,5 @@ class jalaliDatePicker extends Widget
 			$js[] = ".on('{$event}', " . Json::encode($handler) . ")";
 
 		$view->registerJs(implode("\n", $js) . ';',View::POS_READY);
-
 	}
 }
-
