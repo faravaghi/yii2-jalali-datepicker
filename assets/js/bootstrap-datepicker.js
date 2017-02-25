@@ -477,7 +477,9 @@
 				if (currentDate && prevMonth.getGregorianDate().valueOf() == currentDate) {
 					clsName += ' active';
 				}
-				if (prevMonth.valueOf() < this.startDate || prevMonth.valueOf() > this.endDate ||
+				//convert date to gregorian then compare, and add condition for startDate and endDate if is not Infinity date
+				if ((this.startDate !== -Infinity && prevMonth.getGregorianDate().valueOf() < this.startDate.getGregorianDate().valueOf())||
+					(this.endDate !== Infinity && prevMonth.getGregorianDate().valueOf() > this.endDate.getGregorianDate().valueOf()) ||
 					$.inArray(prevMonth.getUTCDay(), this.daysOfWeekDisabled) !== -1) {
 					clsName += ' disabled';
 				}
