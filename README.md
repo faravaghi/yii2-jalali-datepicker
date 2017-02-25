@@ -62,6 +62,8 @@ echo jalaliDatePicker::widget([
     'value'  => '1395/01/31',
 	'options' => [
 			'format' => 'yyyy/mm/dd',
+			'startDate' => '1395/05/12',
+			'endDate' => '1395/10/10',
 			'viewformat' => 'yyyy/mm/dd',
 			'placement' => 'right',
 			'todayBtn' => 'linked' 
