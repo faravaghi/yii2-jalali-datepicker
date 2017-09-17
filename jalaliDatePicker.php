@@ -1,5 +1,9 @@
 <?php
-
+/**
+ * @link http://faravaghi.ir
+ * @copyright Copyright (c) 2017 faravaghi
+ * @license MIT http://opensource.org/licenses/MIT
+ */
 namespace faravaghi\jalaliDatePicker;
 
 use faravaghi\jalaliDatePicker\jalaliDatePickerAsset;
@@ -11,6 +15,9 @@ use yii\helpers\Html;
 use yii\helpers\Json;
 use yii\widgets\InputWidget;
 
+/**
+ * @author Mohammad Ebrahim Amini <info@faravaghi.ir>
+ */
 class jalaliDatePicker extends InputWidget
 {
 
@@ -85,3 +92,4 @@ class jalaliDatePicker extends InputWidget
 		$view->registerJs(implode("\n", $js) . ';',View::POS_READY);
 	}
 }
+

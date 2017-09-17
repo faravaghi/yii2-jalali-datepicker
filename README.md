@@ -2,8 +2,6 @@ Bootstrap Jalali Date Picker
 ========================
 Jalali Date Picker for Bootstrap Yii2 Extension
 
-[![Latest Stable Version](https://poser.pugx.org/faravaghi/yii2-jalali-datepicker/v/stable)](https://packagist.org/packages/faravaghi/yii2-jalali-datepicker) [![Total Downloads](https://poser.pugx.org/faravaghi/yii2-jalali-datepicker/downloads)](https://packagist.org/packages/faravaghi/yii2-jalali-datepicker) [![Latest Unstable Version](https://poser.pugx.org/faravaghi/yii2-jalali-datepicker/v/unstable)](https://packagist.org/packages/faravaghi/yii2-jalali-datepicker) [![License](https://poser.pugx.org/faravaghi/yii2-jalali-datepicker/license)](https://packagist.org/packages/faravaghi/yii2-jalali-datepicker)
-
 Installation
 ------------
 
@@ -44,32 +42,12 @@ echo $form->field(
 			'viewformat' => 'yyyy/mm/dd',
 			'placement' => 'left',
 			'todayBtn'=> 'linked',
+		),
+		'htmlOptions' => [
 			'id' => 'date',
 			'class'	=> 'form-control'
-		),
+		]
 	]);
 
-?>
-```
-or used this without model
-
-```php
-<?php
-use faravaghi\jalaliDatePicker\jalaliDatePicker;
-
-echo jalaliDatePicker::widget([
-    'name'  => 'date',
-    'value'  => '1395/01/31',
-	'options' => [
-			'format' => 'yyyy/mm/dd',
-			'startDate' => '1395/05/12',
-			'endDate' => '1395/10/10',
-			'viewformat' => 'yyyy/mm/dd',
-			'placement' => 'right',
-			'todayBtn' => 'linked' 
-			'id' => 'date',
-			'class' => 'form-control' 
-	],
-]);
 ?>
 ```

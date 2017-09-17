@@ -1,5 +1,9 @@
 <?php
-
+/**
+ * @link http://faravaghi.ir
+ * @copyright Copyright (c) 2017 faravaghi
+ * @license MIT http://opensource.org/licenses/MIT
+ */
 /**
  * @copyright Copyright &copy; Mohammad Ebrahim Amini, faravaghi.ir, 2016
  * @package yii2-widgets
