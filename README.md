@@ -53,3 +53,16 @@ echo $form->field(
 
 ?>
 ```
+or without using the model:
+```php
+echo faravaghi\jalaliDatePicker\jalaliDatePicker::widget([
+	'name' => 'startDate',
+	'value' => '1397/06/20',
+	'options' => array(
+		'format' => 'yyyy/mm/dd',
+		'viewformat' => 'yyyy/mm/dd',
+		'placement' => 'left',
+		'todayBtn'=> 'linked',
+	),
+]);
+```
